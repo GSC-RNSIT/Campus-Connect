@@ -11,7 +11,8 @@
 				<a href="assign.php" style="text-decoration:none"> ASSIGNMENT &nbsp &nbsp </a>
 				<a href="conn.php" style="text-decoration:none"> CONNECT &nbsp &nbsp </a>
 				<a href="faculty.php" style="text-decoration:none"> FACULTY &nbsp &nbsp </a>
-				<a href="THANKS.php" style="text-decoration:none"> THANKS </a>
+				<a href="thanks.php" style="text-decoration:none"> THANKS &nbsp &nbsp </a>
+				<a href="logout.php" style="text-decoration:none"> LOGOUT </a>
    
 	   </td>
 </table>
