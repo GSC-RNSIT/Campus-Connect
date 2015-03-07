@@ -1,23 +1,38 @@
-<?php
-// Start the session
-session_start();
-// Set session variables
-$_SESSION["user"] = "nakul";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
 
-?>
-<html>
-<body>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<?php
-
-if(!isset($_COOKIE['user'])) {
-    header("Location: http:/RNSIT/first.php");
-} else {
     
-	$_SESSION["user"] = $_COOKIE[$cookie_name];
-	header("Location: http:/RNSIT/first.php");
-}
-?>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    
+  </head>
+  <body>
+  <?php
+  session_start();
+  if(isset($_COOKIE['user'])) 
+  {
+    $_SESSION["user"] = $_COOKIE[$cookie_name];
+	header("Location: http:/cc/secure.php");
+  }
+   include('header.php');
+   include('links.php');
+   //include('auto.php');
+   include('body.php');
+   include('footer.php');
+   ?>
+    
 
-</body>
-</html> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

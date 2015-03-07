@@ -1,7 +1,7 @@
  <?php
  session_start();
  if(!isset($_COOKIE['user'])) {
-    header("Location: /index.php");
+    header("Location: /index1.php");
 } else {
     
 	$_SESSION["user"] = $_COOKIE['user'];

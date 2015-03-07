@@ -16,7 +16,7 @@ $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die(header("Location:
   {  
     $sql = "INSERT INTO stemp(firstname,lastname,usn,email,ccode)
     VALUES ('$fname','$lname','$usn','$email','$ccode')";
-	if ($dbconn->query($sql) === TRUE) {}
+	if ($dbconn->query($sql) === TRUE) {}//WHY ARROW?
  	else 
 	{ $loc=1;
       header("Location: http:/RNSIT/pop2.php");
