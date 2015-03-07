@@ -1,23 +1,59 @@
 <html>
-<meta name="google-site-verification" content="Hs8I9MoxK4nO_uDo66MISS0VUmlxAWkuFOE4-zIGnA8" />
-<body bgcolor=666666>         
-<table width=100% bgcolor=0066cc >
-<td>
-<center>
-<img src="images/logo.jpg" height=118px alt="R.N.S. INSTIOTUTE OF TECNOLOGY"><img src="images/header.jpg" alt="R.N.S. INSTIOTUTE OF TECNOLOGY">
-</center>
-</td>
-</table>
+<head>
+<style>
+.gray{
+ background-color: #ccc;
+ padding :20px;
+ }
+
+@media (max-width: 979px) {
+   .img { 
+      display: none;
+   }
+   
+} 
+
+ </style>
+</head> 
+<body>
+
 <?php
-include('links.php');
-?>
-<center>
-<table width=980px height=35px bgcolor=yellow >
-<td>
-<center>
-<h1>RNSIT E-LIBRARY</h1>
-</center>
-</td>
-</table>
-</center>
+if(isset($_COOKIE['user'])) 
+{	
+$dbhost="localhost";
+$dbuser="root";
+$dbpass="";
+$dbname="login";
+$dberror="oops could't been able connect to the server";
+$dbconn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die();
+ 
+       if($dbconn==true) 
+      {   
+          
+		    $usn=$_COOKIE["user"];
+            $sql = "UPDATE studentlogin SET chon=now() WHERE usn='$usn'";
+			
+	  }
+	    if ($dbconn->query($sql) === TRUE) {
+            //echo "Record updated successfully";
+          } else {
+          //echo "Error updating record: " . $dbconn->error;
+          }
+	}		
+?>  
+   <header>  
+      <div class="gray">
+	  <div class="container">
+       <div class="well">
+         <center> <img src="images/logo.jpg" height=118px alt="R.N.S. INSTITUTE OF TECNOLOGY"><img src="images/header.jpg" class="img" alt="R.N.S. INSTIOTUTE OF TECNOLOGY">
+         <span class="containerdiv visible-sm visible-xs hidden-md hidden-lg" src="images/header.jpg"><br>R.N.S. INSTITUTE OF TECNOLOGY</span>
+		 </center> 
+       </div>
+	   </div>
+    </div>
+   </header> 
+
+
+</body>
+
 </html>

@@ -20,8 +20,9 @@ $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die(header("Location:
 			  where usn='$usn'
 	      ";
 	     $dbfetch=mysqli_query($dbconn,$dbquery);
+		
 	     if($dbfetch==false) echo $dberror;
-		 $row=mysqli_fetch_assoc($dbfetch);
+		 $row=mysqli_fetch_assoc($dbfetch);//WHY ASSOC?
 		 
 		 if($row['password']===$pass)
 	     {  

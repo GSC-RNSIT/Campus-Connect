@@ -12,7 +12,7 @@ include('header.php');
 <td>
 <form action="signup.php" method="GET">
 <center>
-<table width=500px bgcolor=0066cc >
+<table width=500px bgcolor=whiter >
 <td><br>
 <input type="hidden" value="sign" name="svalue" placeholder="Last name" align="right"/>
 FIRST NAME &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp : &nbsp &nbsp &nbsp <input type="text" value="" name="fname" placeholder="First name"  pattern="(.){3,25}" align="right" required/>
